@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/mlruns/0/92e3e2f79f72437485f91641bec14219/artifacts
+end_time: 1730219446361
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 92e3e2f79f72437485f91641bec14219
+run_name: blushing-koi-868
+run_uuid: 92e3e2f79f72437485f91641bec14219
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730219415433
+status: 3
+tags: []
+user_id: islam

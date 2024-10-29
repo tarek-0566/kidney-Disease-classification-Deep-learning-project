@@ -407,3 +407,305 @@ x==========x]
 [2024-10-29 15:46:00,038: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2024-10-29 16:39:25,320: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-29 16:39:25,320: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-29 16:39:25,335: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-29 16:39:25,335: INFO: common: created directory at: artifacts]
+[2024-10-29 16:39:25,335: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-29 16:39:25,335: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-29 16:39:34,992: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-29 16:39:36,966: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-29 17:19:21,469: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:19:21,469: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:21:00,694: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:21:00] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:21:04,322: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:21:04] "HEAD / HTTP/1.1" 200 -]
+[2024-10-29 17:21:04,572: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:21:04] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:21:51,001: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2024-10-29 17:21:51,039: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:21:51] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:26:03,480: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-10-29 17:26:03,496: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-29 17:26:03,501: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-29 17:26:03,501: INFO: common: created directory at: artifacts]
+[2024-10-29 17:26:03,501: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-10-29 17:26:03,501: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-29 17:26:13,037: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1vlhZ5c7abUKF8xXERIw6m9Te8fW7ohw3/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-10-29 17:26:14,350: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-10-29 17:26:14,350: INFO: main: *******************]
+[2024-10-29 17:26:14,350: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-10-29 17:26:14,350: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-29 17:26:14,350: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-29 17:26:14,350: INFO: common: created directory at: artifacts]
+[2024-10-29 17:26:14,366: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-10-29 17:26:16,150: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-10-29 17:26:16,437: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-10-29 17:26:16,437: INFO: main: *******************]
+[2024-10-29 17:26:16,438: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-10-29 17:26:16,442: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-29 17:26:16,445: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-29 17:26:16,446: INFO: common: created directory at: artifacts]
+[2024-10-29 17:26:16,447: INFO: common: created directory at: artifacts\training]
+[2024-10-29 17:29:33,094: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-10-29 17:29:33,094: INFO: main: *******************]
+[2024-10-29 17:29:33,094: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-10-29 17:29:33,101: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-10-29 17:29:33,101: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-10-29 17:29:33,101: INFO: common: created directory at: artifacts]
+[2024-10-29 17:30:01,449: INFO: common: json file saved at: scores.json]
+[2024-10-29 17:30:01,449: INFO: common: json file saved at: scores.json]
+[2024-10-29 17:30:17,864: WARNING: save: Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 14). These functions will not be directly callable after loading.]
+[2024-10-29 17:30:19,866: INFO: builder_impl: Assets written to: C:\Users\islam\AppData\Local\Temp\tmpbjyu56kn\model\data\model\assets]
+[2024-10-29 17:30:46,377: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-10-29 17:34:25,321: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:34:25,329: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:34:43,535: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:34:43] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:34:52,577: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:34:53,584: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if result[0] == 1:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[2024-10-29 17:34:53,591: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:34:53] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:43:18,295: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:43:18,295: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:43:37,109: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:43:37] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:43:43,443: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:43:43,959: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if int(result[0]) == 1:
+TypeError: only size-1 arrays can be converted to Python scalars
+[2024-10-29 17:43:43,959: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:43:43] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:46:49,819: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:46:49,819: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:46:57,747: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:46:57] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:47:04,889: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:47:05,355: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if result.item() == 1:
+ValueError: can only convert an array of size 1 to a Python scalar
+[2024-10-29 17:47:05,355: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:47:05] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:48:32,426: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:48:32,426: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:48:34,142: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:48:34] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:48:41,945: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:48:42,448: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if (result[0]) == 1:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[2024-10-29 17:48:42,456: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:48:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:51:07,931: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:51:07,931: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:51:14,441: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:51:14] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:51:21,002: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:51:21,518: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if result[0] == 1:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[2024-10-29 17:51:21,534: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:51:21] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:53:22,211: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:53:22,211: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:53:29,059: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:53:29] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:53:36,244: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:53:36,677: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if int(result[0][0]) == 1:
+TypeError: only size-1 arrays can be converted to Python scalars
+[2024-10-29 17:53:36,694: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:53:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:56:10,874: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:56:10,874: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:56:26,085: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:56:26] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:56:32,589: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:56:33,069: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if  result[0, 0] == 1:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[2024-10-29 17:56:33,069: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:56:33] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 17:58:47,177: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 17:58:47,177: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 17:58:54,102: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:58:54] "GET / HTTP/1.1" 200 -]
+[2024-10-29 17:59:00,878: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 17:59:00,911: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 21, in predict
+    test_image = np.expand_dims(test_image)
+  File "<__array_function__ internals>", line 179, in expand_dims
+TypeError: _expand_dims_dispatcher() missing 1 required positional argument: 'axis'
+[2024-10-29 17:59:00,911: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:59:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
