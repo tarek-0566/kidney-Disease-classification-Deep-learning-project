@@ -3,7 +3,7 @@ from pathlib import Path
 import logging
 
 #logging string
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
+logging.basicConfig(Level=logging.INFO, format = '[%(asctime)s]: %(message)s')
 
 project_name = 'cnnClassifier'
 
@@ -23,8 +23,7 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "research/trials.ipynb",
-    "templates/index.html",
-    "main.py"
+    "templates/index.html"
 
 
 ]
