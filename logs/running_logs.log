@@ -709,3 +709,48 @@ Traceback (most recent call last):
   File "<__array_function__ internals>", line 179, in expand_dims
 TypeError: _expand_dims_dispatcher() missing 1 required positional argument: 'axis'
 [2024-10-29 17:59:00,911: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 17:59:00] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 18:08:20,667: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 18:08:20,667: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 18:08:28,539: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 18:08:28] "GET / HTTP/1.1" 200 -]
+[2024-10-29 18:08:35,541: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 18:08:36,007: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 194, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\islam\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 130, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 49, in predictRoute
+    result = clApp.classifier.predict()
+  File "C:\Users/islam/Downloads/kidney-Disease-classification-Deep-learning-project/src\cnnClassifier\pipeline\prediction.py", line 25, in predict
+    if result[0] == 1:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+[2024-10-29 18:08:36,024: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 18:08:36] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2024-10-29 18:11:27,952: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-29 18:11:27,952: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-29 18:11:39,241: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 18:11:39] "GET / HTTP/1.1" 200 -]
+[2024-10-29 18:11:46,016: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-29 18:11:46,489: INFO: _internal: 127.0.0.1 - - [29/Oct/2024 18:11:46] "POST /predict HTTP/1.1" 200 -]
+[2024-10-30 09:26:30,331: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.100.107:8080]
+[2024-10-30 09:26:30,331: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2024-10-30 09:26:37,872: INFO: _internal: 127.0.0.1 - - [30/Oct/2024 09:26:37] "GET / HTTP/1.1" 200 -]
+[2024-10-30 09:27:00,928: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-30 09:27:02,278: INFO: _internal: 127.0.0.1 - - [30/Oct/2024 09:27:02] "POST /predict HTTP/1.1" 200 -]
+[2024-10-30 09:27:17,850: WARNING: hdf5_format: No training configuration found in the save file, so the model was *not* compiled. Compile it manually.]
+[2024-10-30 09:27:18,166: INFO: _internal: 127.0.0.1 - - [30/Oct/2024 09:27:18] "POST /predict HTTP/1.1" 200 -]
